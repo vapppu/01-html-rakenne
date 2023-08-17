@@ -1,0 +1,60 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+}
+header,
+section,
+footer {
+  border: 1px grey dashed;
+  padding-inline: 1rem;
+}
+section,
+footer {
+  padding-block-start: 1rem;
+}
+h1,
+p,
+figure {
+  margin-block-end: 1rem;
+}
+h1 {
+  font-size: 3rem;
+  margin-block-start: 1rem;
+}
+figure {
+  max-width: 100%;
+}
+img {
+  max-width: 100%;
+}
+
+/* Flex: */
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section > * {
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+section,
+footer {
+  margin-block-start: -1px;
+}
+
+/* Desktop and tablet view: */
+
+@media screen and (min-width: 769px) {
+  section {
+    gap: 1rem;
+  }
+  section > * {
+    flex-basis: 0;
+  }
+}

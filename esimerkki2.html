@@ -1,0 +1,20 @@
+<!-- Toteutin esimerkki.html:n toiminnallisuuden toistolauseella ja lisäämällä kaikki luodut p-elementit arrayhin -->
+
+<body>
+  <script id="script">
+    var div1 = document.createElement("div");
+    document.body.insertBefore(div1, document.body.firstChild);
+
+    paragraphs = [];
+
+    for (var i = 0; i < 3; i++) {
+      var paragraph = document.createElement("p");
+      paragraph.appendChild(
+        document.createTextNode(`${i + 1}. created paragraph.`)
+      );
+      paragraphs.push(paragraph);
+    }
+
+    paragraphs.map((paragraph) => div1.appendChild(paragraph));
+  </script>
+</body>

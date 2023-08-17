@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rakenna HTML-sivu JavaScriptilla</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="layout.css" />
+  </head>
+  <body>
+    <script>
+      var ylatunniste = document.createElement("header");
+      var rinnakkain = document.createElement("section");
+      var alatunniste = document.createElement("footer");
+
+      [ylatunniste, rinnakkain, alatunniste].map((element) =>
+        document.body.insertBefore(element, document.body.lastChild)
+      );
+
+      var h1 = document.createElement("h1");
+      h1.appendChild(document.createTextNode("Tämä on artikkelin otsikko"));
+      ylatunniste.appendChild(h1);
+
+      var p1 = document.createElement("p");
+      p1.appendChild(
+        document.createTextNode(
+          "Ensimmäinen kappale! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur autem in corporis pariatur vero, dicta minima, eos rem dolore nobis repellendus minus quibusdam quisquam perspiciatis placeat voluptatum molestias nostrum a dolorem temporibus magni quasi quod qui. Impedit, natus magni? Quia!"
+        )
+      );
+      ylatunniste.appendChild(p1);
+
+      var p2 = document.createElement("p");
+      p2.appendChild(
+        document.createTextNode(
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illum deserunt error, asperiores rerum pariatur repudiandae atque eum quam hic in doloremque nobis blanditiis voluptates beatae obcaecati. Ipsam consequuntur officia suscipit. Quas corporis sit voluptas recusandae hic omnis qui iure exercitationem! Minus nulla eligendi omnis quis voluptates, voluptatibus debitis accusantium."
+        )
+      );
+      rinnakkain.appendChild(p2);
+
+      var kuvanpaikka = document.createElement("figure");
+      rinnakkain.appendChild(kuvanpaikka);
+
+      var p3 = document.createElement("p");
+      p3.appendChild(document.createTextNode("@ 2019 Juha Konttinen"));
+      alatunniste.appendChild(p3);
+
+      var kuva = document.createElement("img");
+      kuva.src = "./machine.gif";
+      kuvanpaikka.appendChild(kuva);
+    </script>
+  </body>
+</html>

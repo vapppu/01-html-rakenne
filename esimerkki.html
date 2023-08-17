@@ -1,0 +1,20 @@
+<!-- Etsi 1. body-tag, sijoita uusi div bodyn sisään, lisää div-elementille id="div1", lisää div-elementin sisään kaksi kappaletta-->
+
+<body>
+  <script id="script">
+    var div1 = document.createElement("div");
+    document.body.insertBefore(div1, document.body.firstChild);
+
+    var p1 = document.createElement("p");
+    p1.appendChild(document.createTextNode("First created paragraph."));
+    div1.appendChild(p1);
+
+    var p2 = document.createElement("p");
+    p2.appendChild(document.createTextNode("Second created paragraph."));
+    div1.appendChild(p2);
+
+    var p3 = document.createElement("p");
+    p3.appendChild(document.createTextNode("Third created paragraph."));
+    div1.appendChild(p3);
+  </script>
+</body>
